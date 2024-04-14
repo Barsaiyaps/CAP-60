@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .navbar{
+        width:100%;
+        height: 150px;
+    }
+    .navbar>div{
+        display: flex;
+        width: 1000px;
+        height: 45%;
+        margin: auto;
+    }
+    .navbar>div>img{
+        height:80%;
+        width: auto;
+        margin-top:5px ;
+
+    }
+    input{
+        width: 55%;
+        height:50%;
+        margin: auto;
+        margin-left:10px ;
+    }
+    #location{
+        height: 50%;
+        width: 14%;
+        padding: auto;
+        border-radius: 5px;
+        margin: auto;
+        background-color: rgb(210, 210, 210);
+        padding-top: 10px;
+    }
+    #signup{
+        height: 60%;
+        width: 10%;
+        margin: auto;
+        border-radius: 5px;
+        background-color:black;
+        color: white;
+    }
+    #shopby{
+        width: 18%;
+        height: 80%;
+        color: azure;
+        background-color: green;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+    .nav2{
+
+        display: flex;
+        width: 75%;
+        margin-top: 10px;
+        margin-left:10px ;
+
+    }
+    .nav2>div{
+        width:50%;
+        margin: 10px;
+        height: 80%;
+
+    }
+    .main{
+        width: 1000px;
+        margin: auto;
+    }
+    .items{
+        width: 1000px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    #banner{
+        margin: 50px 0px;
+    }
+    #banner>img{
+        width: 100%;
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+    }
+    #option{
+        display: flex;
+        margin: 10px;
+        justify-content: space-between;
+    }
+    #option>div{
+        width: 15%;
+        text-align: center;
+        color: black;
+        font-size:medium;
+        background-color: rgb(194, 192, 192);
+        border-radius: 10px;
+    }
+  
+    #option>div>img{
+     width: 100%;
+     height: 100%;               
+    }
+    #container{
+        margin: auto;
+        width: 1000px;
+        display: grid;  
+        grid-template-columns: repeat(4,1fr);
+        
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      #container>div{
+        
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        font-size: xx-small;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+      }
+      #container>div>img{
+        width: 90%;
+        align-items: center;
+      }
+      #container>div>button{
+        width: 80%;
+      }
+
+
+      .bottomnav1{
+        display: flex;
+        width: 1000px;
+        background-color: black;
+        color: white;
+        margin: auto;        
+    }
+    .bottomnav1>div{
+        padding: 10px;
+        width: 30%;
+    }
+    #footer{
+        background-color: black;
+    }
+</style>
+</head>
+<body>
+    
+        <div class="navbar">
+            <div>
+                <img src="data:image/png;base64,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">
+                <input placeholder="Search for Products...">
+                <div id="location">Select Location</div>
+                <button id="signup">Login/Sign Up</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrYRfZqmcXC-GJuz5OcAw8lK-1FjurVmHycw&s" alt="">
+            </div>
+            <div>
+                <button id="shopby"> Shop By Category</button>
+                <div class="nav2">
+                   <div>Exotic Fruits & Veggies</div>
+                   <div>Tea</div>
+                   <div>Ghee</div>
+                   <div>Nandini</div>
+                   <div>>></div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="banner">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/B2C032109362-17153-web-100424-all.jpg?tr=w-1920,q=80">
+            </div>
+            <div id="option">
+                <div>EGGS, MEAT AND FISH</div>
+                <div><img src="https://www.tajhotels.com/content/dam/tic/tataneu/logo/220216-NEUPASS-Identity-RGB-Positive.jpg"></div>
+                <div style="background-color: green; color:white">AYURVEDA</div>
+                <div>BUY MORE SAVE MORE</div>
+                <div>DEALS OF THE WEEK</div>
+                <div>COMBO STORE</div>
+            </div>
+        </div>
+        <div class="items">
+            <h1>My Smart Basket</h1>
+          <div id="container">
+            
+
+          </div>
+
+            <div id="banner">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_bcd_m_bcd_250923_400.jpg?tr=w-1920,q=80">
+            </div>
+            <p><b>bigbasket – online grocery store</b></p>
+            <p>Did you ever imagine that the freshest of fruits and vegetables, top-quality pulses and food grains, dairy products, and hundreds of branded items could be handpicked and delivered to your home, all at the click of a button? In today's fast-paced world, bigbasket.com, India's pioneering online grocery store, continues to bring a staggering array of over 40,000 products from more than 1,000 brands to the doorsteps of over 10 million satisfied customers. From essential household cleaning products to the latest beauty and makeup trends, bigbasket remains your one-stop shop for daily needs.</p>
+            <p>In these times, we've eliminated the stress associated with shopping for daily essentials. You can now effortlessly order all your household products and groceries online. Plus, the added convenience of finding all your requirements at a single source, coupled with substantial savings, demonstrates that bigbasket, India's largest online supermarket, has transformed the way we shop for groceries. Online grocery shopping has become second nature. And when it comes to freshness, whether it's fruits and vegetables or dairy and meat, we've got you covered! Easily obtain fresh eggs, meat, fish, and more with just a few clicks.</p>
+            <p>We now serve 300+ cities and towns across India and ensure swift delivery times, guaranteeing that all your groceries, snacks and branded foods reach you on time.</p>
+            <p>Slotted Delivery: Choose the most convenient delivery slot to receive your groceries, ranging from early morning delivery for early birds to late-night delivery for those on the night shift. bigbasket caters to every schedule.</p>
+            <p>Instant delivery from bbnow: In response to the ever-increasing demand for convenience, bbnow by bigbasket offers lightning-fast grocery delivery, ensuring that your essentials are at your doorstep within 15-30 minutes. Our quick delivery service has revolutionized the way you shop for groceries. Choose from 5000+ grocery essentials. bbnow is available only in select cities.</p>
+            <p>Whether it's a last-minute dinner party or you simply need something urgently, we've got you covered. This service exemplifies our commitment to providing you with not just the widest range of products but also the fastest and most efficient shopping experience, making bigbasket.com the go-to destination for all your immediate grocery needs.</p>
+        </div>
+        <div id="footer">
+        <div class="bottomnav1">
+            <div>
+                <ul>
+                    <ul>About Us</ul>
+                    <ul>About Us</ul>
+                    <ul>About Us</ul>
+                    <ul>About Us</ul>
+                    <ul>About Us</ul>
+                    <ul>About Us</ul>
+                    <ul>About Us</ul>
+                    <ul>About Us</ul>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <ul>Help</ul>
+                    <ul>Help</ul>
+                    <ul>Help</ul>
+                    <ul>Help</ul>
+                    <ul>Help</ul>
+                    
+                </ul>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+   let prod=[
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    {image:"https://www.bigbasket.com/media/uploads/p/m/10000067_23-fresho-capsicum-green.jpg?tr=w-1920,q=80",
+    name:"Capsicum - Green (Loose)",
+    price: "RS-100",
+    },
+  
+    ]
+
+    let container = document.querySelector("#container")
+
+    prod.forEach(function(ele,i){
+
+        let seperatediv= document.createElement("div")
+
+        let img1=document.createElement("img")
+        img1.src=ele.image
+
+        let heading=document.createElement("h1")
+        heading.innerText=ele.name
+
+        let price1=document.createElement("h1")
+        price1.innerText=ele.price
+
+        let input1=document.createElement("input")
+        input1.placeholder="1 Kg"
+
+        let button1=document.createElement("button")
+        button1.innerText="ADD"
+
+        seperatediv.append(img1,heading,input1,price1,button1)
+        container.append(seperatediv)
+    })
+
+</script>
