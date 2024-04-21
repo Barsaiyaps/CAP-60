@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: auto;
+            height: 50px;
+            font-size: 50px;
+            text-align: center; 
+            margin: 20%;
+        }
+        .button{
+            display: block;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="screen"></div>
+<div class="button">
+<button id="start"  onclick="start()">START</button>
+<button onclick="pause()">PAUSE</button>
+<button onclick="reset()">RESET</button>
+</div>
+</body>
+</html>
+<script>
+    let sec = 0;
+    let minute=0;
+    let hour=0;
+    let int1=null;
+
+let scr=document.querySelector(".screen")
+
+scr.innerHTML=0 +" sec"
+let change=document.querySelector("#start")
+
+
+function start(){
+        change.innerHTML="START"
+        int1 = setInterval(function () {
+        if(sec<=59){
+        scr.innerHTML = (hour)+" hr "+(minute)+" minute "+(sec++) + " sec ";
+        }else {
+            sec=0
+              if(minute<=58){
+                scr.innerHTML = (hour)+" hr "+(minute++)+" minute "+(sec++) + " sec ";
+              }else{
+                minute =0
+                scr.innerHTML = (hour++)+" hr "+(minute)+" minute "+(sec) + " sec "
+              }
+
+        }
+    },1000)
+
+return int1
+}
+
+function pause(){
+    clearInterval(int1)
+    scr.innerHTML = (hour)+" hr "+(minute)+" minute "+(sec) + " sec ";
+}
+
+function reset(){
+    clearInterval(int1)
+     minute=0;
+     hour=0;
+     sec = 0;
+  scr.innerHTML = (hour)+" hr "+(minute)+" minute "+(sec) + " sec ";
+}
+
+</script>
