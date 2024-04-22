@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #image{
+        width: 1200px;
+        height: 800px;
+    }
+</style>
+</head>
+<body>
+<div >
+
+    <img  id="image">
+</div>    
+
+<button onclick="pre()">PREVIOUS</button>
+<button onclick="start()">START</button>
+<button onclick="next()">NEXT</button>
+
+
+</body>
+</html>
+
+<script>
+    let image=[
+    "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/07/dhanush-1-1658979649.jpg",
+    "https://i.ytimg.com/vi/EWQKmOLHUEg/maxresdefault.jpg",
+    "https://res.klook.com/image/upload/q_85/c_fill,w_750/v1686680641/rl0gqzptxa6v1lwkfcpc.jpg",
+    "https://i.ytimg.com/vi/COv52Qyctws/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDO6OaXWvS_GeGKeaNcSaw3Fo8j-w",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcRziSQOvWsAJf3Bf_baL3v9bOqHrtVPT4QA&usqp=CAU",
+    "https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2022/11/02/208517-air-7.jpg?itok=Qk5K8I2i",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC0chK5Y9DYW4Sgq8jODCAS0sqlODCMV6hpA&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-mAEHeeMK1OtsD4VaFAn1gfo_7-NUDChlAw&usqp=CAU",
+    "https://imgeng.jagran.com/images/2022/nov/December-OTT-Movies-20221669717765999.jpg",
+    "https://cdn.bollywoodmdb.com/fit-in/post/NSIfvOttP_1674375283071.jpg",
+    "https://images.indianexpress.com/2021/12/Bollywood-films-2022.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQR-iDvnyLKi4OT90BXMDWbFXqZ_NgAd8Sig&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5c288U47ggrzeXCjLcbLyR1XkxQYA346Cew&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbg1HOw-D2P_UyWAhP-l92Lm0WlPPGNXOUvQ&usqp=CAU",
+    "https://assets.mspimages.in/gear/wp-content/uploads/2023/03/OTT-Mar-1-2023.jpg",
+    "https://images.thedirect.com/media/article_full/marvel-dc-2023-superhero-movies.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbaj5p08QlowIu6bhzY-2GcJCnEHcJKp2tIQ&usqp=CAU",
+    "https://imgeng.jagran.com/images/2023/sep/VinDiesel1695725240731.jpg",
+    "https://netstorage-tuko.akamaized.net/images/d9ec888f63cccc25.jpg?imwidth=900",
+    "https://www.91-cdn.com/hub/wp-content/uploads/2023/09/OTT-releases-this-week-October-4th.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2EQmHoUmHCN8kxQ2QZM83ybLvO3jLmexrxw&usqp=CAU"
+]
+
+let img=document.querySelector("#image")
+let interval=null
+let i=0;
+function start(){
+
+interval=setInterval(function(){
+    if(i<=image.length){
+        img.src=image[i]
+        i++
+    }else{
+        i=0
+        img.src=image[i]
+        i++
+    }
+
+},1000)
+}
+
+function pre(){
+    clearInterval(interval)
+    if(i>0){
+    i--
+    img.src=image[i]
+    }else{
+        i=20;
+        img.src=image[i]
+    }
+}
+
+function next(){
+    clearInterval(interval)
+    if(i<=20){
+    i++
+    img.src=image[i]
+    }else{
+        i=0;
+        img.src=image[i]
+    }
+}
+
+</script>
