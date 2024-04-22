@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <input id="input" placeholder="ENTER TIME" height="40px" width="60px">
+    <button onclick="start()">START</button>
+    <button onclick="pause()">PAUSE</button>
+    <button onclick="reset()">RESET</button>
+    <h1 id="disp">0 SEC</h1>
+    
+</body>
+</html>
+
+<script>
+ let first=document.getElementById("input") ;
+ let disp=document.getElementById("disp").innerText;
+ let pp;
+ var count
+ function start(){
+    count=document.getElementById("input").value;
+     pp=setInterval(function(){
+        if(count>=0){
+    document.getElementById("disp").innerText=+count+" SEC";
+    count--;
+        }
+},1000)
+}
+
+function pause(){
+ clearInterval(pp)
+ 
+    
+}
+function reset(){
+    count=0
+    document.getElementById("disp").innerText=+count+" SEC";
+    first.value=""
+    
+}
+</script>
