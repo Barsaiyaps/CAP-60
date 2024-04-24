@@ -15,10 +15,12 @@ fetch(URL)
 let select=document.querySelector("select")
 
 function showdata(arr){
+    main.innerHTML=""
     arr.forEach(function(ele,i) {
 
 let card=document.createElement("div")
 
+     
         let ID=document.createElement("h2")
         ID.innerHTML="ID - " +ele.id 
 
