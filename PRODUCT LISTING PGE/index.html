@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style >
+    .navbar{
+        display:flex;
+        background-color: rgb(61, 60, 60);
+        height: 60px;
+        align-items: center;
+        justify-content: space-between;
+        color: aliceblue;
+        padding:20px 25px;
+        margin: auto;
+    }
+    .main{
+        width: 1200px;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+    .main>div{
+        border: 1px solid grey;
+        padding: 20px;
+
+    }
+    img{
+        width:150px;
+        border: 1px;
+        height: 150px;
+    }
+   </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Product Listing Page</h1>
+        <div>
+        <select class="select1">
+            <option value="men's clothing">MENS CLOTHING</option>
+            <option value="women's clothing">WOMENS CLOTHING</option>
+            <option value="jewelery">JEWELERY</option>
+            <option value="electronics">ELECTRONICS</option>
+            
+        </select>
+        <input placeholder="Search Products...">
+    </div>
+        <select class="select2" >
+            <option value="asc">LOW TO HIGH</option>
+            <option value="desc">HIGH TO LOW</option>
+        </select>
+    </div>
+    <div class="main">
+
+    </div>
+</body>
+</html>
+<script src="index.js">    </script>
