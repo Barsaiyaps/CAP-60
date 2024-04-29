@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            margin: auto;
+            align-items: center;
+            text-align: center;
+        }
+        .navbar{
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .navbar>div{
+            display: flex;
+        }
+        table{
+            
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Employee Management System</h1>
+    </div>
+
+    <div class="navbar">
+        <div>
+        <p>Filter By Department : </p>
+        <select id="select1">
+            <option value="hr" >HR</option>
+            <option value="finance">FINANCE</option>
+            <option value="marketing">MARKETING</option>
+            <option value="engineering">ENGINEEERING</option>
+            <option value="operations">OPERATION</option> 
+        </select>
+    </div>
+    <div>
+         <p>Filter By Gender : </p>
+         <select id="select2">
+            <option value="male">MALE</option>
+            <option value="female">FEMALE</option> 
+        </select>
+    </div>
+    <div>
+         <p>Sort By Salary : </p>
+         <select id="select3">
+            <option value="asc">LOW TO HIGH</option>
+            <option value="desc">HIGH TO LOW</option> 
+        </select>
+        
+    </div>
+    </div>
+
+    <div >
+        <table class="main">
+            <thead>
+            <tr>
+                <th>S. no</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+       
+
+        </table>
+
+    </div>
+    
+</body>
+</html>
+
+<script src="index.js"></script>
