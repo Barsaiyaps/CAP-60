@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    
+    <div id="root">
+
+    </div>
+
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+  
+ function App(){
+  
+    const [name,setname]=React.useState("");
+
+    function handleChange(event){
+
+        setname(event.target.value);
+    }
+
+    console.log(name);
+    return (
+        <div>
+
+            <input 
+            placeholder="enter name"
+            value={name}
+            onChange={handleChange}
+            />
+        </div>
+    );
+ }
+
+ let rootelement=document.getElementById("root");
+ ReactDOM.createRoot(rootelement).render(<App/>)
+
+    </script>
+  </body>
+</html>
+
+
+
+
