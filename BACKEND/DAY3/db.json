@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "task": "write",
+      "status": false
+    },
+    {
+      "id": 3,
+      "task": "swim for 1 hr",
+      "status": false
+    },
+    {
+      "id": 5,
+      "task": "swim for 1 hr",
+      "status": false
+    }
+  ]
+}
