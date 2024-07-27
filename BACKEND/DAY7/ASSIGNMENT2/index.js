@@ -20,15 +20,15 @@ server.get("/get-users",(req,res)=>{
 })
 
 server.post("/add-users",(req,res)=>{
-    res.send("<h2>THIS IS HOME 3</h2>")
+    res.send("SUCCESSFULLY POSTED")
 })
 
 server.put("/user/:id",(req,res)=>{
-    res.send("<h2>THIS IS HOME 4</h2>")
+    res.send("SUCCESSFULLY UPDATED")
 })
 
 server.delete("/user/:id",(req,res)=>{
-    res.send("<h2>THIS IS HOME 5</h2>")
+    res.send("SUCCESSFULLY DELETED")
 })
 
 server.listen(PORT,()=>{
