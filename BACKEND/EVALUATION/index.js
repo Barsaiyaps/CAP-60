@@ -11,14 +11,6 @@ server.use(express.json());
 server.use(morgan("combined"))
 
 
-const courseSchema=mongoose.Schema({
-    id:String,
-    title:String,
-    category:String,
-    difficulty:String,
-    description:String,
-})
-
 const userSchema=mongoose.Schema({
     id:String,
     username:String,
@@ -26,11 +18,13 @@ const userSchema=mongoose.Schema({
     enrolledCourses:String,
 })
 
-const CourseModel=mongoose.model("course",courseSchema)
+
 const UserModel=mongoose.model("user",userSchema)
+
 server.get("/courses",(req,res)=>{
-    res.send("This is the courses")
-})
+    fs.readFile("./db.json","utf8",(err,data)=>{
+        return res.send(JSON.parse(data));
+    })})
 
 server.post("/enroll",(req,res)=>{
     res.send("This is the courses")

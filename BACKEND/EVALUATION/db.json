@@ -1,0 +1,13 @@
+{
+    "courses": [
+      {
+        "id": "course1",
+        "title": "Intro to Programming",
+        "category": "programming",
+        "difficulty": "beginner",
+        "description": "Learn the basics of programming."
+      }
+    ],
+    "page": 1,
+    "totalPages": 5
+  }
