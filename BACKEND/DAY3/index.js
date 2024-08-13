@@ -5,7 +5,7 @@ const fs = require("fs")
 const server= express();
 server.use(express.json());  // middleware
 
-const PORT= 8080;
+const PORT= 8180;
 
 const readJson=()=>{
 const data = fs.readFileSync("db.json")
