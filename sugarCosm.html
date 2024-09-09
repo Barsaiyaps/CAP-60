@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <style>
+       
+        img{
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .container>div{
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    button{
+        padding: 10px 20px;
+        background-color: rgb(254, 177, 190);
+        border-style: dashed;
+        color: rgb(225, 85, 108);
+        border-radius: 5px;
+        border: 2px dashed rgb(225, 85, 108) ;
+        
+    }
+
+    div>div>div{
+        display: flex;
+        justify-content: right;
+        width: 90%;
+    }
+
+
+
+        @media all and (max-width:720px){
+            .container{
+                margin: auto;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            text-align: center;
+        }        
+
+
+}
+
+@media all and (min-width:721px){
+    .container{
+                margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            text-align: center;
+        }
+    
+
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+         <img src="https://images.sugarcosmetics.com/Promotion/5b050f83-b466-416b-89ce-f179462ac8f0.jpg">
+         <div>
+         <button>PRIMER999</button>
+         </div>
+        </div>
+        <div>
+            <img src="https://d32baadbbpueqt.cloudfront.net/Promotion/0844a8f6-78e3-429d-b352-4e020f447004.jpg">
+            <div>
+            <button>GIFT799</button>
+            </div>
+           </div>
+           <div>
+            <img src="https://images.sugarcosmetics.com/Promotion/9b51e68a-a374-408a-ad3b-7d521346dc13.jpg">
+            <div>
+            <button>COUPON1499</button>
+            </div>
+           </div>
+           <div>
+            <img src="https://images.sugarcosmetics.com/Promotion/5dacc47b-0505-4fa2-9ea3-d3e3b88d3f50.jpg">
+            <div>
+            <button>PALLETE1299</button>
+            </div>
+           </div>
+           <div>
+            <img src="https://images.sugarcosmetics.com/Promotion/7ee374a2-db58-4159-83c5-d8b2b02579cd.jpg">
+            <div>
+            <button>GIVA2499</button>
+            </div>
+           </div>
+           <div>
+            <img src="https://images.sugarcosmetics.com/Promotion/63b782a7-3a1f-4424-953d-372cb8a9cca7.jpg">
+            <div>
+            <button>SHINE999</button>
+            </div>
+           </div>
+           <div>
+            <img src="https://images.sugarcosmetics.com/Promotion/63b782a7-3a1f-4424-953d-372cb8a9cca7.jpg">
+            <div>
+            <button>COUPON25</button>
+            </div>
+    </div>
+</body>
+</html>
