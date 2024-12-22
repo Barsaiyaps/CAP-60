@@ -305,3 +305,8 @@ function complexOperation(a, b) {
 
 
 complexOperation(5, 3);
+
+
+let x=5+2;
+
+console.log(x)
